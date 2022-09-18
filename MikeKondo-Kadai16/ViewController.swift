@@ -11,9 +11,8 @@ final class ViewController: UIViewController {
     // MARK: - UI Parts
     @IBOutlet private weak var fruitTableView: UITableView!
 
-    private var fruitTableViewCell = FruitTableViewCell()
-    private var selectedFruitName = String()
-    private var selectedIndex = Int()
+    private var selectedFruitName = ""
+    private var selectedIndex = 0
 
     private var fruits = [Fruit(name: "りんご", isCheck: false),
                          Fruit(name: "みかん", isCheck: true),
@@ -28,15 +27,15 @@ final class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navigation = segue.destination as? UINavigationController else { return }
         guard let select = navigation.topViewController as? InputFruitViewController else { return }
+        select.delegate = self
+
         switch segue.identifier {
         case "InputFruit":
-            select.modeType = ModeType.input
-            select.delegate = self
+            select.modeType = .input
         case "EditFruit":
-            select.modeType = ModeType.edit
-            select.selectedFruitName = selectedFruitName
-            select.selectedIndex = selectedIndex
-            select.delegate = self
+            select.modeType = .edit(
+                .init(name: selectedFruitName, index: selectedIndex)
+            )
         default:
             break
         }
