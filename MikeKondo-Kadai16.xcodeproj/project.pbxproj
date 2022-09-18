@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9597251F28D429F1003F863F /* ModeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597251E28D429F1003F863F /* ModeType.swift */; };
 		95BF3EDF28D136B5003BDD06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF3EDE28D136B5003BDD06 /* AppDelegate.swift */; };
 		95BF3EE128D136B5003BDD06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF3EE028D136B5003BDD06 /* SceneDelegate.swift */; };
 		95BF3EE328D136B5003BDD06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF3EE228D136B5003BDD06 /* ViewController.swift */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9597251E28D429F1003F863F /* ModeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeType.swift; sourceTree = "<group>"; };
 		95BF3EDB28D136B5003BDD06 /* MikeKondo-Kadai16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MikeKondo-Kadai16.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BF3EDE28D136B5003BDD06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95BF3EE028D136B5003BDD06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,14 +45,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9597251D28D429E5003F863F /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-				9597251E28D429F1003F863F /* ModeType.swift */,
-			);
-			path = Enum;
-			sourceTree = "<group>";
-		};
 		95BF3ED228D136B5003BDD06 = {
 			isa = PBXGroup;
 			children = (
@@ -74,7 +64,6 @@
 		95BF3EDD28D136B5003BDD06 /* MikeKondo-Kadai16 */ = {
 			isa = PBXGroup;
 			children = (
-				9597251D28D429E5003F863F /* Enum */,
 				95BF3EF228D136EC003BDD06 /* Cell */,
 				95BF3EDE28D136B5003BDD06 /* AppDelegate.swift */,
 				95BF3EE028D136B5003BDD06 /* SceneDelegate.swift */,
@@ -194,7 +183,6 @@
 				95BF3EF828D13968003BDD06 /* Fruit.swift in Sources */,
 				95BF3EF528D1370F003BDD06 /* FruitTableViewCell.swift in Sources */,
 				95BF3EFC28D13B97003BDD06 /* InputFruitViewController.swift in Sources */,
-				9597251F28D429F1003F863F /* ModeType.swift in Sources */,
 				95BF3EE328D136B5003BDD06 /* ViewController.swift in Sources */,
 				95BF3EDF28D136B5003BDD06 /* AppDelegate.swift in Sources */,
 				95BF3EE128D136B5003BDD06 /* SceneDelegate.swift in Sources */,
