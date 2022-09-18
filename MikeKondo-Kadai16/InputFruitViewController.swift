@@ -12,16 +12,32 @@ protocol InputFruitViewControllerDelegate: AnyObject {
 }
 
 final class InputFruitViewController: UIViewController {
+    struct EditModeDetail {
+        let name: String
+        let index: Int
+    }
+
+    enum ModeType {
+        case input
+        case edit(EditModeDetail)
+    }
+
     // MARK: - UI Parts
     @IBOutlet private weak var fruitTextField: UITextField!
-    var selectedFruitName = String()
-    var selectedIndex = Int()
     var modeType: ModeType?
     weak var delegate: InputFruitViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fruitTextField.text = selectedFruitName
+
+        switch modeType {
+        case .input:
+            break
+        case .edit(let detail):
+            fruitTextField.text = detail.name
+        case nil:
+            fatalError("modeType is nil")
+        }
     }
 
     @IBAction private func didSaveFruitButton(_ sender: Any) {
@@ -29,8 +45,8 @@ final class InputFruitViewController: UIViewController {
         switch modeType {
         case .input:
             delegate?.didSaveFruit(name: fruitName)
-        case .edit:
-            delegate?.didEditFruit(name: fruitName, index: selectedIndex)
+        case .edit(let detail):
+            delegate?.didEditFruit(name: fruitName, index: detail.index)
         default:
             break
         }
